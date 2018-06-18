@@ -1,9 +1,10 @@
 public class School {
     public static void main(String[] args) {
-        Teacher teacher= new Teacher("Jan","kowalki",35,"yes");
-        Student student =new Student("Kasia","pak",14,5);
+        Teacher teacher= new Teacher("Jan","Kowalski",50,"dr");
+        Student student =new Student("Kasia","Bak",12,6,"dobre");
 
-        student.showInfo();
-        teacher.showInfo();
+        System.out.println( student.toString());
+        System.out.println( teacher.toString());
+
     }
 }

@@ -1,18 +1,32 @@
-public class Student {
-    String firstName;
-    String lastName;
-    int age;
-    int bestGrade;
+public class Student extends Person {
 
-    public Student(String firstName, String lastName, int age, int bestGrade) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.bestGrade = bestGrade;
+    private int klasa;
+    private String zachowanie;
+
+    public Student(String firstName, String lastName, int age, int klasa, String zachowanie) {
+        super(firstName, lastName, age);
+        this.klasa = klasa;
+        this.zachowanie = zachowanie;
     }
 
-    void showInfo() {
-        System.out.println(firstName + " " + lastName + " " + age + " " + bestGrade);
+    public int getKlasa() {
+        return klasa;
     }
 
+    public void setKlasa(int klasa) {
+        this.klasa = klasa;
+    }
+
+    public String getZachowanie() {
+        return zachowanie;
+    }
+
+    public void setZachowanie(String zachowanie) {
+        this.zachowanie = zachowanie;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ " " + klasa + " " + zachowanie;
+    }
 }
